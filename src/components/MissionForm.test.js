@@ -23,4 +23,5 @@ test("renders loading message when isFetchingData changes to true", () => {
 
   // assert - check that the loading message is rendered
   expect(screen.getByText(/we are fetching data/i)).toBeInTheDocument();
+  expect(screen.queryByRole("button")).toBeNull();
 });
