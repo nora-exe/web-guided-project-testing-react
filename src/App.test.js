@@ -35,10 +35,9 @@ test("missions data is rendered after the API call is resolved", async () => {
 
   // an async call is initiated - we "await" for that process to finish,
   // then make some assertion
-  debug();
 
   // await waitFor(() => screen.queryAllByTestId(/mission/i));
+  // expect(screen.queryAllByTestId(/mission/i)).toHaveLength(3);
 
   expect(await screen.findAllByTestId(/mission/i)).toHaveLength(3);
-  debug();
 });
