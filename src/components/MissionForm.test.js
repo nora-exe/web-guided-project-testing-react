@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { userEvent } from "@testing-library/user-event";
+import userEvent from "@testing-library/user-event";
 import MissionForm from "./MissionForm";
 
 // const { queryByRole, queryByText, getByRole, getByText } = screen;
@@ -42,7 +42,8 @@ test("the function prop is called when Get Data is clicked", () => {
   render(<MissionForm getData={mockGetData} />);
 
   // act - click the Get Data button
-  screen.getByRole("button", { name: /get data/i });
+  const button = screen.getByRole("button", { name: /get data/i });
+  userEvent.click(button);
 
   // assert
 });
