@@ -1,5 +1,10 @@
 import React from "react";
-import { render, screen, waitFor } from "@testing-library/react";
+import {
+  findAllByTestId,
+  render,
+  screen,
+  waitFor,
+} from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { fetchMissions as mockFetchMissions } from "./api/fetchMissions";
 
@@ -32,8 +37,9 @@ test("missions data is rendered after the API call is resolved", async () => {
   // then make some assertion
   debug();
 
-  await waitFor(() => screen.queryAllByTestId(/mission/i));
+  // await waitFor(() => screen.queryAllByTestId(/mission/i));
+  const divs = await screen.findAllByTestId(/mission/i);
 
   debug();
-  expect(screen.queryAllByTestId(/mission/i)).toHaveLength(3);
+  expect(divs).toHaveLength(3);
 });
