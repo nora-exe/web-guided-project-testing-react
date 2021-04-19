@@ -21,11 +21,12 @@ const testData = [
 test("missions data is rendered after the API call is resolved", async () => {
   // 2. make the mock function return a promise, then return data
   mockFetchMissions.mockResolvedValueOnce(testData); // () => new Promise(); resolve(testData)
-  render(<App />);
+  const { debug } = render(<App />);
 
   // click on the button
   userEvent.click(screen.getByRole("button", { name: /get data/i }));
 
   // an async call is initiated - we "await" for that process to finish,
   // then make some assertion
+  debug();
 });
