@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { fetchMissions as mockFetchMissions } from "./api/fetchMissions";
 
@@ -29,4 +29,6 @@ test("missions data is rendered after the API call is resolved", async () => {
   // an async call is initiated - we "await" for that process to finish,
   // then make some assertion
   debug();
+
+  await waitFor(() => screen.queryAllByTestId(/mission/i));
 });
