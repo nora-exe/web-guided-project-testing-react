@@ -18,6 +18,5 @@ test("renders loading message when isFetchingData changes to true", () => {
   rerender(<MissionForm isFetchingData={true} />);
 
   // assert - check that the loading message is rendered
-  const loadingMessage = screen.getByText(/we are fetching data/i);
-  expect(loadingMessage).toBeInTheDocument();
+  expect(screen.getByText(/we are fetching data/i)).toBeInTheDocument();
 });
