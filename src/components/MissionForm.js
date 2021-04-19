@@ -1,9 +1,9 @@
 import React from "react";
 
-const MissionForm = props => {
-  const handleGetData = e => {
+const MissionForm = (props) => {
+  const handleGetData = (e) => {
     e.preventDefault();
-    props.getData();
+    props.getData("hello");
   };
 
   return (

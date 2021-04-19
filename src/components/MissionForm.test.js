@@ -46,5 +46,8 @@ test("the function prop is called when Get Data is clicked", () => {
   userEvent.click(button);
 
   // assert
-  expect(mockGetData).not.toHaveBeenCalled();
+  expect(mockGetData).toHaveBeenCalled();
+  expect(mockGetData).toHaveBeenCalledTimes(1);
+  // expect(mockGetData).toHaveBeenCalled();
+  // expect(mockGetData).toHaveBeenCalled();
 });
