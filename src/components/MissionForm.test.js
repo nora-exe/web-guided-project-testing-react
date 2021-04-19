@@ -12,11 +12,10 @@ test("renders without errors", () => {
 // then the loading message appears in place of the button.
 test("renders loading message when isFetchingData changes to true", () => {
   // arrange - render the component with the starting props
-  const container = render(<MissionForm isFetchingData={false} />);
-  console.log(container);
+  const { rerender } = render(<MissionForm isFetchingData={false} />);
 
   // act - rerender the component with new props
-  // rerender();
+  rerender(<MissionForm isFetchingData={true} />);
 
   // assert - check that the loading message is rendered
 });
