@@ -58,10 +58,9 @@ const testDataTwo = [
 // then it displays the data in the DOM
 test("displays missions data when passed in as a prop", () => {
   const { rerender, debug } = render(<MissionsList missions={[]} />);
-  debug();
 
   // negative assertions
 
   rerender(<MissionsList missions={testData} />);
-  debug();
+  expect(screen.getAllByTestId(/mission/i)).toHaveLength(3);
 });
