@@ -8,13 +8,19 @@ import App from "./App";
 // mock the function that makes the API request
 // 1 - build the mock function
 jest.mock("./api/fetchMissions");
-console.log(mockFetchMissions);
+
+const testData = [
+  { mission_id: "123", mission_name: "Thaicom" },
+  { mission_id: "1234", mission_name: "Telstar" },
+  { mission_id: "1235", mission_name: "Iridium NEXT" },
+];
 
 // When the app comp renders and the "get data" button is clicked
 // the api call is made and the missions list is rendered when the api
 // promise is resolved
 test("missions data is rendered after the API call is resolved", async () => {
   // 2. make the mock function return a promise, then return data
+  mockFetchMissions.mockResolvedValueOnce(testData); // () => new Promise(); resolve(testData)
   render(<App />);
 
   // click on the button
