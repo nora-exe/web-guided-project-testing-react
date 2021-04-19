@@ -15,7 +15,7 @@ test("renders loading message when isFetchingData changes to true", () => {
   const { rerender } = render(<MissionForm isFetchingData={false} />);
 
   // assert - the Get Data button is rendered before the props change
-  expect(screen.queryByText(/we are fetching data/i)).not.toBeInTheDocument();
+  expect(screen.queryByText(/we are fetching data/i)).toBeNull();
 
   // act - rerender the component with new props
   rerender(<MissionForm isFetchingData={true} />);
