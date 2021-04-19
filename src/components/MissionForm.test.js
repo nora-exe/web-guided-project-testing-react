@@ -34,4 +34,12 @@ test("renders loading message when isFetchingData changes to true", () => {
 
 // When the user clicks the button
 // then the function passed in from props is called
-test("the function prop is called when Get Data is clicked", () => {});
+test("the function prop is called when Get Data is clicked", () => {
+  // arrange - create the mock function
+  const mockGetData = jest.fn();
+  console.log(mockGetData);
+  // arrange - render the component, pass the mock function in as a prop
+
+  // act
+  // assert
+});
