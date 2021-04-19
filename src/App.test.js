@@ -8,4 +8,10 @@ import App from "./App";
 // promise is resolved
 test("missions data is rendered after the API call is resolved", async () => {
   render(<App />);
+
+  // click on the button
+  userEvent.click(screen.getByRole("button", { name: /get data/i }));
+
+  // an async call is initiated - we "await" for that process to finish,
+  // then make some assertion
 });
