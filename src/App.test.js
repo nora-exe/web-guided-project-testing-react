@@ -33,4 +33,7 @@ test("missions data is rendered after the API call is resolved", async () => {
   debug();
 
   await waitFor(() => screen.queryAllByTestId(/mission/i));
+
+  debug();
+  expect(screen.queryAllByTestId(/mission/i)).toHaveLength(3);
 });
