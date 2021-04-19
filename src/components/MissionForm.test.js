@@ -29,3 +29,9 @@ test("renders loading message when isFetchingData changes to true", () => {
 });
 
 // MOCK FUNCTIONS
+// build a mock function, pass the mock function in as a prop
+// assert some things from/about the mock function
+
+// When the user clicks the button
+// then the function passed in from props is called
+test("the function prop is called when Get Data is clicked", () => {});
