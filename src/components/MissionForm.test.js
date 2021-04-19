@@ -10,4 +10,6 @@ test("renders without errors", () => {
 
 // When the component receives true for "isFetchingData" prop,
 // then the loading message appears in place of the button.
-test("renders loading message when isFetchingData changes to true", () => {});
+test("renders loading message when isFetchingData changes to true", () => {
+  render(<MissionForm isFetchingData={false} />);
+});
