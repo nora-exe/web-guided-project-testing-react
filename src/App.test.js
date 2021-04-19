@@ -9,11 +9,13 @@ import App from "./App";
 // 1 - build the mock function
 jest.mock("./api/fetchMissions");
 
-const testData = [
-  { mission_id: "123", mission_name: "Thaicom" },
-  { mission_id: "1234", mission_name: "Telstar" },
-  { mission_id: "1235", mission_name: "Iridium NEXT" },
-];
+const testData = {
+  data: [
+    { mission_id: "123", mission_name: "Thaicom" },
+    { mission_id: "1234", mission_name: "Telstar" },
+    { mission_id: "1235", mission_name: "Iridium NEXT" },
+  ],
+};
 
 // When the app comp renders and the "get data" button is clicked
 // the api call is made and the missions list is rendered when the api
