@@ -60,6 +60,7 @@ test("displays missions data when passed in as a prop", () => {
   const { rerender, debug } = render(<MissionsList missions={[]} />);
 
   // negative assertions
+  expect(screen.queryAllByTestId(/mission/i)).toHaveLength(0);
 
   rerender(<MissionsList missions={testData} />);
   expect(screen.getAllByTestId(/mission/i)).toHaveLength(3);
