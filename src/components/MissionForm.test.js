@@ -48,6 +48,6 @@ test("the function prop is called when Get Data is clicked", () => {
   // assert
   expect(mockGetData).toHaveBeenCalled();
   expect(mockGetData).toHaveBeenCalledTimes(1);
-  // expect(mockGetData).toHaveBeenCalled();
+  expect(mockGetData).toHaveBeenCalledWith("hellos");
   // expect(mockGetData).toHaveBeenCalled();
 });
