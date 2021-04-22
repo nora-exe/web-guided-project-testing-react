@@ -10,20 +10,20 @@ Steps to be ready for the GP today:
 1. Open the project in your editor
 
 ## Key Terminology
-📝 mock functions - [Function placeholders use to monitor function execution within a test.](https://jestjs.io/docs/en/mock-functions.html)
-📝 mock spys - [Function placeholders that mock the execution of external libraries](https://silvenon.com/blog/mocking-with-jest/functions)
-📝 rerender - [A react testing library module use to render a component more then once in a test.](https://testing-library.com/docs/react-testing-library/api/#rerender)
-📝 async / await - [A javascript syntax that allows simpler, cleaner async code.](https://javascript.info/async-await)
-📝 wait / waitFor - [React testing library modules that allow a component test to wait until an async call or state chance occurs.](https://testing-library.com/docs/dom-testing-library/api-async/)
+* 📝 mock functions - [Function placeholders use to monitor function execution within a test.](https://jestjs.io/docs/en/mock-functions.html)
+* 📝 mock spys - [Function placeholders that mock the execution of external libraries](https://silvenon.com/blog/mocking-with-jest/functions)
+* 📝 rerender - [A react testing library module use to render a component more then once in a test.](https://testing-library.com/docs/react-testing-library/api/#rerender)
+* 📝 async / await - [A javascript syntax that allows simpler, cleaner async code.](https://javascript.info/async-await)
+* 📝 wait / waitFor - [React testing library modules that allow a component test to wait until an async call or state chance occurs.](https://testing-library.com/docs/dom-testing-library/api-async/)
 
 💡 Key Concepts
-📝 [unit testing](https://www.guru99.com/unit-testing-guide.html)
-📝 [integration testing](https://www.guru99.com/unit-testing-guide.html)
+* 📝 [unit testing](https://www.guru99.com/unit-testing-guide.html)
+* 📝 [integration testing](https://www.guru99.com/unit-testing-guide.html)
 
 💡 Reference Materials
-📝 [React Testing Library query cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet/)
-📝 [Jest expect functions](https://jestjs.io/docs/en/expect.html)
-📝 [Jest Mock functions reference](https://www.w3resource.com/jest/mock-functions-api-reference.php)
+* 📝 [React Testing Library query cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet/)
+* 📝 [Jest expect functions](https://jestjs.io/docs/en/expect.html)
+* 📝 [Jest Mock functions reference](https://www.w3resource.com/jest/mock-functions-api-reference.php)
 
 ## Notes
 - Testing React Components
@@ -48,16 +48,16 @@ Test
 - testing transitions w rerendering
 
 💡 AAA
-__Arrange__ - setup component I'm testing
-__Act__ - execute behavior & extract what I'm testing
-__Assert__ - check if got expected response
+* __Arrange__ - setup component I'm testing
+* __Act__ - execute behavior & extract what I'm testing
+* __Assert__ - check if got expected response
 
 ⚡ Questions to ask yourself when devlping component unit tests:
-> Does the component render by default without errors?
-> How does the component change depending on the props passed in?
-> Does the component respond to user input?
-> Does the component respond to state change (async calls / redux)?
-> Does the component have error states?
+> * Does the component render by default without errors?
+> * How does the component change depending on the props passed in?
+> * Does the component respond to user input?
+> * Does the component respond to state change (async calls / redux)?
+> * Does the component have error states?
 
 __Be specific about your test cases.__
 When X happens then component does Y.
@@ -77,17 +77,17 @@ jest.mock("./api/fetchMissions");
 
 ### Steps
 MissionForm.test.js in ./components
-5 imports
-test() render(</>)
-abstract container.rerender 
-set isFetchingData to true
-expect statement + select message with screen.getByText
-getBy if expected, queryBy if NOT expected
+* 5 imports
+* test() render(</>)
+* abstract container.rerender 
+* set isFetchingData to true
+* expect statement + select message with screen.getByText
+* getBy if expected, queryBy if NOT expected
 
 Mocks:
-create mock function w jest
-PASS MOCK F IN AS PROP
-expect mock to be called
+* create mock function w jest
+* PASS MOCK F IN AS PROP
+* expect mock to be called
 
 MissionsList.test.js in ./components
 
