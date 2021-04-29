@@ -95,5 +95,6 @@ App.test.js in src
 
 
 
-## Links
-🎥 https://www.loom.com/share/d77ba3d65dc9456392a808c34bc323db
+## MP
+🎥https://www.loom.com/share/d77ba3d65dc9456392a808c34bc323db
+⚙ https://github.com/nora-exe/web-module-project-testing-react/tree/nora-corser
